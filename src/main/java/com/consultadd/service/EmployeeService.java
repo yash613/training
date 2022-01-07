@@ -35,8 +35,8 @@ public class EmployeeService {
         else
             return "the given id does not exist";
     }
-    public  String updateEmployee(Employee employee){
-        if(employeeRepository.existsById(employee.getId())) {
+    public  String updateEmployee(String id,Employee employee){
+        if(employeeRepository.existsById(id)) {
             employeeRepository.save(employee);
             return "data Updated successfully";
         }

@@ -23,19 +23,19 @@ public class EmployeeController {
     }
 
 
-    @PostMapping("/addemp")
+    @PostMapping("/employee")
     public String saveEmployee(@RequestBody Employee employee){
     return  employeeService.saveEmployee(employee);
     }
 
-    @DeleteMapping("/emp/{empid}")
+    @DeleteMapping("/employee/{empid}")
     public String deleteEmployee(@PathVariable("empid") String empid){
         return employeeService.deleteEmployee(empid);
     }
 
-    @PutMapping("/employee")
-    public String updateEmployee(@RequestBody Employee employee){
-        return employeeService.updateEmployee(employee);
+    @PutMapping("/employee/{empid}")
+    public String updateEmployee(@PathVariable("empid") String empid,@RequestBody Employee employee){
+        return employeeService.updateEmployee(empid,employee);
     }
 
 }
