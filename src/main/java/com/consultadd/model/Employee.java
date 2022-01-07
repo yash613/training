@@ -1,8 +1,18 @@
 package com.consultadd.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Employee {
     @Id
@@ -10,40 +20,6 @@ public class Employee {
     private  String name;
     private  int age;
 
-    public Employee() {
-    }
-
-    public Employee(String id, String name, int age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
-
-
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
 
 
