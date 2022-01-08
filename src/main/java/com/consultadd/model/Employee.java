@@ -19,7 +19,6 @@ public class Employee {
     private  String id;
     private  String name;
     private  int age;
-    private String city;
 
 }
 
