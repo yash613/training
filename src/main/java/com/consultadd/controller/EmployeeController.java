@@ -38,4 +38,11 @@ public class EmployeeController {
         return employeeService.updateEmployee(empid,employee);
     }
 
+
+
+    @GetMapping("employee/{age}")
+    public ResponseEntity findAllByAge(@PathVariable("age") int age){
+        return ResponseEntity.ok(employeeService.findAllByAge(age));
+    }
+
 }

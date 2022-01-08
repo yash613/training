@@ -47,5 +47,8 @@ public class EmployeeService {
 
     }
 
+       public List<Employee> findAllByAge(int age){
+        return employeeRepository.findAllByAge(age);
+       }
 
 }
