@@ -10,6 +10,8 @@ import java.util.List;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, String> {
-    @Query(value = "Select * from Employee  where age = :age",nativeQuery = true)
+    @Query(value = "Select e from Employee e where e.age = :age")
     List<Employee> findAllByAge(int age);
 }
+
+
