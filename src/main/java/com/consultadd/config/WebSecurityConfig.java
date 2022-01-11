@@ -31,11 +31,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
+
+        http.csrf().disable();
         http.authorizeRequests()
                 .antMatchers(HttpMethod.GET,"/employee")
                 .permitAll()
-//                .antMatchers(HttpMethod.DELETE,"/employee/{empid}")
-//                .hasAuthority("ADMIN")
+                .antMatchers(HttpMethod.POST,"/employee")
+                .hasAuthority("ADMIN")
                 .antMatchers("/employee/{age}")
                 .hasAuthority("USER")
                 .anyRequest()
