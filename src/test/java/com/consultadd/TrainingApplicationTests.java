@@ -55,13 +55,6 @@ public class TrainingApplicationTests {
 
 	 }
 
-//	 @Test
-//	 public void saveEmployeeTest(){
-//		 Employee emp1=new Employee("5","yash",27);
-//		 Mockito.when(employeeRepository.save(emp1)).thenReturn("data saved successfully");
-//
-//		 assertEquals("data saved successfully",s1);
-//	 }
 
 	@Test
 	public  void  test_saveEmployee(){
@@ -70,7 +63,17 @@ public class TrainingApplicationTests {
 
 		Mockito.when(employeeRepository.save(emp1)).thenReturn(emp1);
 
-		assertEquals(emp1,employeeService.saveEmployee(emp1));
+		assertEquals("data saved successfully",employeeService.saveEmployee(emp1));
 
 	}
+
+//	@Test
+//	public  void test_deleteEmployee(){
+//		Employee emp1=new Employee("1","yash",27);
+//
+//		employeeService.deleteEmployee(emp1.getId());
+//
+//		Mockito.verify(employeeRepository,Mockito.times(1)).deleteById(emp1.getId());
+//
+//	}
 }
